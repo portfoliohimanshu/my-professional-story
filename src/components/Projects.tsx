@@ -13,7 +13,37 @@ const Projects = () => {
         "Modular and scalable REST APIs with React components",
         "MERN stack implementation"
       ],
-      tags: ["React", "Node.js", "MongoDB", "Express", "REST API"]
+      tags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      github: undefined,
+      demo: undefined
+    },
+    {
+      title: "COVID-19 Spread Analysis Using Generalized SEIR Model",
+      description: "Designed a SEIR model in MATLAB to analyze and predict COVID-19 spread using real-time data from the Johns Hopkins University database.",
+      features: [
+        "Mathematical modeling of disease transmission dynamics (Susceptible-Exposed-Infected-Recovered)",
+        "Real-time data integration from Johns Hopkins University COVID-19 database",
+        "Predictive analysis of disease progression under stable epidemiological conditions",
+        "Parameter estimation for infection rate, incubation period, and recovery rate",
+        "Visualization of epidemic curves and forecasting trends"
+      ],
+      tags: ["MATLAB", "Epidemiology", "Data Analysis", "Mathematical Modeling", "COVID-19"],
+      github: "https://github.com/razorblade42/SEIR-model-for-COVID19",
+      demo: undefined
+    },
+    {
+      title: "GUI Group Chat Application",
+      description: "TCP-based real-time group chat application with client-server architecture, featuring a user-friendly graphical interface.",
+      features: [
+        "Multi-client TCP socket communication using Python's Socket library",
+        "Server-side message broadcasting to all connected clients",
+        "Intuitive GUI built with Tkinter for seamless user experience",
+        "Real-time message delivery and client connection management",
+        "Thread-based architecture for handling concurrent client connections"
+      ],
+      tags: ["Python", "Socket Programming", "TCP/IP", "Tkinter", "Networking"],
+      github: "https://github.com/razorblade42/Group-Chat-application",
+      demo: undefined
     },
     {
       title: "Unsupervised Chunking (Hindi)",
@@ -23,7 +53,9 @@ const Projects = () => {
         "Implemented K-means clustering for pattern recognition",
         "Language processing for Hindi text analysis"
       ],
-      tags: ["Python", "NLP", "Machine Learning", "K-means"]
+      tags: ["Python", "NLP", "Machine Learning", "K-means"],
+      github: undefined,
+      demo: undefined
     }
   ];
 
@@ -45,12 +77,30 @@ const Projects = () => {
                 <CardTitle className="text-2xl flex items-center justify-between">
                   {project.title}
                   <div className="flex gap-2">
-                    <Button size="icon" variant="ghost" className="hover:bg-primary/20">
-                      <Github className="w-4 h-4" />
-                    </Button>
-                    <Button size="icon" variant="ghost" className="hover:bg-primary/20">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                    {project.github && (
+                      <Button 
+                        size="icon" 
+                        variant="ghost" 
+                        className="hover:bg-primary/20"
+                        asChild
+                      >
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                          <Github className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
+                    {project.demo && (
+                      <Button 
+                        size="icon" 
+                        variant="ghost" 
+                        className="hover:bg-primary/20"
+                        asChild
+                      >
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="View live demo">
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardTitle>
                 <CardDescription className="text-foreground/70">{project.description}</CardDescription>
