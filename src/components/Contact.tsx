@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, Linkedin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Globe, Code2 } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Delhi, India",
+      value: "Bengaluru, India",
       href: null
     }
   ];
@@ -33,6 +33,11 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://linkedin.com/in/himanshu"
+    },
+    {
+      icon: Code2,
+      label: "LeetCode",
+      href: "https://leetcode.com/u/__struggler__/"
     },
     {
       icon: Globe,

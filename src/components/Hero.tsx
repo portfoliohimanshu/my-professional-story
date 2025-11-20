@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code2 } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -55,6 +55,15 @@ const Hero = () => {
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
+          </a>
+          <a 
+            href="https://leetcode.com/u/__struggler__/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-secondary hover:bg-primary transition-colors"
+            aria-label="LeetCode"
+          >
+            <Code2 className="w-5 h-5" />
           </a>
           <a 
             href="mailto:himanshu.builds@gmail.com"
