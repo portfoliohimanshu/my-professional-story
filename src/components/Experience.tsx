@@ -5,7 +5,7 @@ const Experience = () => {
     {
       title: "Software Engineer",
       organization: "One Savings Bank India (OSBI)",
-      location: "Remote",
+      location: "Bengaluru",
       period: "June 2025 - Current",
       description: [
         "Architected and implemented Java microservices using orchestration patterns for the bank's new mobile application backend.",
