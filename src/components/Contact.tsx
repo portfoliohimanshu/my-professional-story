@@ -51,7 +51,7 @@ const Contact = () => {
           Feel free to reach out!
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           {contactInfo.map((info, index) => {
             const Icon = info.icon;
             return (
