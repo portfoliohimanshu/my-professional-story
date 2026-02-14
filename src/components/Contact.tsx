@@ -10,12 +10,6 @@ const Contact = () => {
       href: "mailto:himanshu.builds@gmail.com"
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 7488978136",
-      href: "tel:+917488978136"
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Bengaluru, India",
