@@ -5,6 +5,20 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Giggle – Squad Discovery Platform",
+      description: "Real-time social discovery platform enabling \"Squad-to-Squad\" video encounters featuring synchronized cinematic reveals and a geo-sharded matchmaking engine.",
+      features: [
+        "Integrated Agora RTC for low-latency multi-participant video streaming and Socket.io for a sub-millisecond global signaling mesh",
+        "Optimized system performance and reliability using a hybrid MongoDB/Redis architecture with Redlock-based atomic pairing",
+        "Migrated high-frequency session data to Redis Hashes to reduce database overhead and improve reliability",
+        "Developed a responsive \"Industrial Minimalist\" UX using Next.js 15 and Framer Motion featuring collapsible workspaces",
+        "Implemented immersive discovery modes and a \"Gatekeeper\" manual approval security pipeline"
+      ],
+      tags: ["Next.js 15", "Agora RTC", "Socket.io", "MongoDB", "Redis", "Framer Motion"],
+      github: undefined,
+      demo: "https://giggle-web-git-main-razorblade42s-projects.vercel.app/"
+    },
+    {
       title: "Learnspac – Learning Platform",
       description: "Full-stack learning management system enabling institutes to create and manage courses, assignments, and student enrollments seamlessly.",
       features: [
