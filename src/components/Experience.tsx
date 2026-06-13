@@ -1,4 +1,5 @@
 import Timeline from "./Timeline";
+import AnimatedSection from "./ui/animated-section";
 
 const Experience = () => {
   const experiences = [
@@ -56,11 +57,16 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          <span className="text-gradient">Experience</span>
-        </h2>
+    <section id="experience" className="py-24 px-6 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">
+              Professional <span className="text-gradient">Experience</span>
+            </h2>
+            <p className="text-muted-foreground">My career path and major professional milestones.</p>
+          </div>
+        </AnimatedSection>
         <Timeline items={experiences} />
       </div>
     </section>
