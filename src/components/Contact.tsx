@@ -23,12 +23,12 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/himanshu"
+      href: "https://github.com/razorblade42"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/himanshu"
+      href: "https://www.linkedin.com/in/himanshu-056b461a4/"
     },
     {
       icon: Code2,
@@ -36,9 +36,9 @@ const Contact = () => {
       href: "https://leetcode.com/u/__struggler__/"
     },
     {
-      icon: Globe,
-      label: "Website",
-      href: "https://www.himanshu.studio"
+      icon: Send,
+      label: "Resume",
+      href: "https://drive.google.com/file/d/1WJlhb0OsoixLFevOkeUQM5WNmo3JBCY4/view"
     }
   ];
 

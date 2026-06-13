@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -72,12 +72,18 @@ const Hero = () => {
               <ExternalLink className="w-4 h-4" />
             </a>
           </Button>
+          <Button size="lg" variant="outline" className="h-12 px-8 rounded-full border-white/10 glass-card hover:bg-white/5 transition-all hover:scale-105 active:scale-95">
+            <a href="https://drive.google.com/file/d/1WJlhb0OsoixLFevOkeUQM5WNmo3JBCY4/view" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              Resume
+              <FileText className="w-4 h-4" />
+            </a>
+          </Button>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex gap-6 justify-center">
           {[
-            { icon: <Github />, href: "https://github.com/himanshu", label: "GitHub" },
-            { icon: <Linkedin />, href: "https://linkedin.com/in/himanshu", label: "LinkedIn" },
+            { icon: <Github />, href: "https://github.com/razorblade42", label: "GitHub" },
+            { icon: <Linkedin />, href: "https://www.linkedin.com/in/himanshu-056b461a4/", label: "LinkedIn" },
             { icon: <Code2 />, href: "https://leetcode.com/u/__struggler__/", label: "LeetCode" },
             { icon: <Mail />, href: "mailto:himanshu.builds@gmail.com", label: "Email" }
           ].map((social, i) => (
