@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import AnimatedSection from "./ui/animated-section";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -74,71 +76,86 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+      
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          <span className="text-gradient">Featured Projects</span>
-        </h2>
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">
+              Featured <span className="text-gradient">Projects</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A selection of my recent work, ranging from real-time social platforms to mathematical modeling and NLP.
+            </p>
+          </div>
+        </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className="bg-card border-border card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader>
-                <CardTitle className="text-2xl flex items-center justify-between">
-                  {project.title}
-                  <div className="flex gap-2">
-                    {project.github && (
-                      <Button 
-                        size="icon" 
-                        variant="ghost" 
-                        className="hover:bg-primary/20"
-                        asChild
-                      >
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
-                          <Github className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
-                    {project.demo && (
-                      <Button 
-                        size="icon" 
-                        variant="ghost" 
-                        className="hover:bg-primary/20"
-                        asChild
-                      >
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="View live demo">
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </CardTitle>
-                <CardDescription className="text-foreground/70">{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-4">
-                  {project.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-foreground/80 pl-4 relative before:content-['▹'] before:absolute before:left-0 before:text-primary">
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span 
-                      key={idx} 
-                      className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={index} delay={index * 0.1}>
+              <motion.div
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card className="h-full bg-card/40 backdrop-blur-sm border-white/5 hover:border-primary/30 transition-all group">
+                  <CardHeader>
+                    <CardTitle className="text-2xl flex items-center justify-between gap-4">
+                      <span className="group-hover:text-primary transition-colors">{project.title}</span>
+                      <div className="flex gap-2 shrink-0">
+                        {project.github && (
+                          <Button 
+                            size="icon" 
+                            variant="ghost" 
+                            className="w-9 h-9 rounded-full hover:bg-primary/20 hover:text-primary"
+                            asChild
+                          >
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                              <Github className="w-4 h-4" />
+                            </a>
+                          </Button>
+                        )}
+                        {project.demo && (
+                          <Button 
+                            size="icon" 
+                            variant="ghost" 
+                            className="w-9 h-9 rounded-full hover:bg-primary/20 hover:text-primary"
+                            asChild
+                          >
+                            <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="View live demo">
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    </CardTitle>
+                    <CardDescription className="text-foreground/60 leading-relaxed pt-2">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 mb-6">
+                      {project.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="text-sm text-foreground/70 pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary/60">
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, idx) => (
+                        <span 
+                          key={idx} 
+                          className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-primary/5 text-primary border border-primary/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
