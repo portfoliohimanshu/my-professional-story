@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himanshu — Software Engineer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f1117;
+    --ink-light: #3d4150;
+    --ink-muted: #6b7080;
+    --accent: #1a56db;
+    --accent-light: #e8effd;
+    --rule: #e2e5ec;
+    --bg: #ffffff;
+    --tag-bg: #f0f2f7;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #d6dae3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: var(--bg);
+    width: 794px;
+    padding: 44px 52px 40px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .name {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .title-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 9px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 10px;
+  }
+
+  .contacts a, .contacts span {
+    font-size: 11.5px;
+    color: var(--ink-light);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .contacts a:hover { color: var(--accent); }
+
+  /* ── SECTION ── */
+  section { margin-bottom: 16px; }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* ── EXPERIENCE ── */
+  .job { margin-bottom: 13px; }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .job-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .job-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  .job-company {
+    font-size: 11.5px;
+    color: var(--ink-light);
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .job-company .location {
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+
+  ul {
+    padding-left: 14px;
+    list-style: none;
+  }
+
+  ul li {
+    font-size: 11.8px;
+    color: var(--ink-light);
+    line-height: 1.55;
+    margin-bottom: 3px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: -13px;
+    color: var(--accent);
+    font-size: 9px;
+    top: 2px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 5px 12px;
+  }
+
+  .skill-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink);
+    padding-top: 1px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    background: var(--tag-bg);
+    color: var(--ink-light);
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+  }
+
+  /* ── PROJECTS ── */
+  .project { margin-bottom: 11px; }
+  .project:last-child { margin-bottom: 0; }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .project-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .project-links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .project-stack {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    margin-bottom: 4px;
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  .ach-list { list-style: none; padding: 0; }
+  .ach-list li {
+    font-size: 11.8px;
+    color: var(--ink-light);
+    line-height: 1.5;
+    margin-bottom: 3px;
+    padding-left: 14px;
+    position: relative;
+  }
+  .ach-list li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: #e8a020;
+    font-size: 9px;
+    top: 2px;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .edu-school { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+  .edu-detail { font-size: 11.5px; color: var(--ink-light); margin-top: 1px; }
+  .edu-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--ink-muted);
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="name">HIMANSHU</div>
+      <div class="title-tag">SOFTWARE ENGINEER · BACKEND</div>
+    </div>
+    <div class="contacts">
+      <span>+91 74889 78136</span>
+      <a href="mailto:himanshu.builds@gmail.com">himanshu.builds@gmail.com</a>
+      <a href="https://www.linkedin.com/in/himanshu-056b461a4/" target="_blank">linkedin.com/in/himanshu-056b461a4</a>
+      <a href="https://github.com/razorblade42" target="_blank">github.com/razorblade42</a>
+      <a href="https://main--himanshu-pro.netlify.app/" target="_blank">himanshu-pro.netlify.app</a>
+      <span>Bengaluru, India</span>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="section-title">Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Software Engineer</div>
+        <div class="job-date">June 2025 – Present</div>
+      </div>
+      <div class="job-company">One Savings Bank India (OSBI) <span class="location">· Bengaluru</span></div>
+      <ul>
+        <li>Architected Java-based microservices using orchestration patterns to power the backend of the bank's mobile app, supporting <strong>10K+ daily active users</strong> from launch.</li>
+        <li>Led backend integration of FusionAuth APIs for identity management, cutting onboarding time for existing web users by ~<strong>40%</strong> by enabling seamless cross-platform auth.</li>
+        <li>Built secure RESTful APIs for biometric registration and login workflows handling <strong>30K+ auth requests/day</strong> with sub-200ms p99 latency.</li>
+        <li>Extended GraphQL APIs for mobile use cases, reducing average query response time by <strong>35%</strong> through targeted query optimization and resolver refactoring.</li>
+        <li>Deployed backend services on Microsoft Azure using Terraform (IaC), APIM for API gateway management, and Mambu for core banking integration.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Software Engineer</div>
+        <div class="job-date">May 2023 – June 2025</div>
+      </div>
+      <div class="job-company">Cognam Technologies <span class="location">· Remote</span></div>
+      <ul>
+        <li>Integrated virtual card functionality using ISO8583 and Lithic into the user wallet, enabling card activation, deactivation, PIN change, and limit settings for <strong>50K+ wallet users</strong>.</li>
+        <li>Designed a configurable multi-step auth system (OAuth/OIDC, email, SMS) with invitation-based onboarding, reducing unauthorized access incidents by <strong>~60%</strong>.</li>
+        <li>Optimized Criteria JPA SQL queries for transaction reporting, cutting CSV export time for <strong>1M+ row datasets from ~45s to under 8s</strong>.</li>
+        <li>Built an admin support portal with HTMX + Spring Boot, eliminating full-page reloads and improving ops team task throughput by <strong>~30%</strong>.</li>
+        <li>Implemented multilingual notifications and device fingerprinting, improving security posture and increasing push notification engagement by <strong>25%</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Software Engineer Intern</div>
+        <div class="job-date">Apr 2022 – Nov 2022</div>
+      </div>
+      <div class="job-company">Oxytocin Labs &amp; Cognam Technologies (Trainee) <span class="location">· Remote</span></div>
+      <ul>
+        <li>Built RESTful APIs in Node.js/TypeScript and React components for a SaaS ad platform serving clients including Spotify and Amazon.</li>
+        <li>Enhanced the Jinjava templating engine and used ANTLR to build a linter with syntax/semantic validators for a web template DSL.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section>
+    <div class="section-title">Achievements</div>
+    <ul class="ach-list">
+      <li>Ranked <strong>282nd in India</strong> at Google Hashcode — top competitive programming contest by Google.</li>
+      <li>CodeChef <strong>4-star (1800+)</strong> rating; solved <strong>600+ problems</strong> across LeetCode, Codeforces, and CodeChef.</li>
+      <li><strong>AIR 8,000</strong> in IIT JEE Advanced 2019 — admitted to IIT Goa, one of India's premier engineering institutions.</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-name">Giggle — Real-time Squad Discovery Platform</div>
+        <div class="project-links">
+          <a href="https://giggle-web-git-main-razorblade42s-projects.vercel.app/" target="_blank">Live ↗</a>
+          <a href="https://github.com/razorblade42" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-stack">Next.js 15 · Node.js · Socket.io · Agora RTC · MongoDB · Redis · Redlock</div>
+      <ul>
+        <li>Engineered a "Squad-to-Squad" video discovery platform with geo-sharded matchmaking using a hybrid MongoDB/Redis architecture.</li>
+        <li>Implemented Redlock-based atomic pairing and migrated high-frequency session data to Redis Hashes, reducing DB overhead by <strong>~50%</strong>.</li>
+        <li>Integrated Agora RTC for low-latency multi-participant video and Socket.io for a global sub-millisecond signaling mesh.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-name">Learnspac — Learning Management System</div>
+        <div class="project-links">
+          <a href="https://master.d23e6ad1u7odbc.amplifyapp.com" target="_blank">Live ↗</a>
+          <a href="https://github.com/razorblade42" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-stack">React · Node.js · MongoDB · Express · JWT · RBAC</div>
+      <ul>
+        <li>Built a full-stack LMS with in-browser code execution, role-based access (admin/instructor/student), and modular REST APIs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS + EDUCATION side by side -->
+  <div class="two-col">
+    <section>
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-label">Core</div>
+        <div class="skill-tags">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Microservices</span><span class="tag">Hibernate</span>
+        </div>
+        <div class="skill-label">Backend</div>
+        <div class="skill-tags">
+          <span class="tag">REST APIs</span><span class="tag">GraphQL</span><span class="tag">gRPC</span><span class="tag">Kafka</span><span class="tag">Redis</span>
+        </div>
+        <div class="skill-label">Databases</div>
+        <div class="skill-tags">
+          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span>
+        </div>
+        <div class="skill-label">Cloud/DevOps</div>
+        <div class="skill-tags">
+          <span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">Linux</span>
+        </div>
+        <div class="skill-label">Other</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Node.js</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div style="margin-bottom:10px">
+        <div class="edu-row">
+          <div class="edu-school">Indian Institute of Technology, Goa</div>
+          <div class="edu-date">2019 – 2023</div>
+        </div>
+        <div class="edu-detail">B.Tech, Computer Science &amp; Engineering · CGPA: <strong>8.43 / 10</strong></div>
+      </div>
+    </section>
+  </div>
+
+</div>
+</body>
+</html>
