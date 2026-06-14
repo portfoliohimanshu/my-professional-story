@@ -1,0 +1,128 @@
+\documentclass{resume}
+
+\usepackage[a4paper]{geometry}
+\geometry{
+left=0.4in,
+right=0.4in,
+top=0.3in,
+bottom=0.3in
+}
+
+\usepackage{xurl} 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{HIMANSHU}
+
+\address{+91 74889 78136 $\cdot$ \href{mailto:himanshu.builds@gmail.com}{himanshu.builds@gmail.com} $\cdot$ Bengaluru, India}
+\address{\href{https://www.linkedin.com/in/himanshu-056b461a4/}{linkedin} $\cdot$ \href{https://github.com/razorblade42}{github} $\cdot$ \href{https://main--himanshu-pro.netlify.app/}{himanshu-pro.netlify.app}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+
+{\bf Indian Institute of Technology, Goa} \hfill 2019 – 2023\\
+B.Tech, Computer Science \& Engineering \hfill CGPA: \textbf{8.43 / 10}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Experience}
+
+\textbf{Software Engineer} \hfill June 2025 – Present\\
+One Savings Bank India (OSBI) \hfill \textit{Bengaluru}
+\begin{itemize}
+    \itemsep-0.6em
+    \item Architected Java-based microservices using orchestration patterns for mobile app backend, supporting \textbf{10K+ DAU}.
+    \item Led FusionAuth API integration for identity management, cutting onboarding time for web users by \textbf{~40\%}.
+    \item Built secure RESTful APIs for biometric workflows handling \textbf{30K+ requests/day} with sub-200ms p99 latency.
+    \item Extended GraphQL APIs for mobile, reducing response time by \textbf{35\%} through targeted query optimization.
+    \item Deployed services on Azure via Terraform (IaC), using APIM and Mambu for core banking integration.
+\end{itemize}
+
+\textbf{Software Engineer} \hfill May 2023 – June 2025\\
+Cognam Technologies \hfill \textit{Remote}
+\begin{itemize}
+    \itemsep-0.6em
+    \item Integrated virtual card functionality (ISO8583/Lithic) for wallet activation and PIN management for \textbf{50K+ users}.
+    \item Designed configurable multi-step auth (OAuth/OIDC/SMS), reducing unauthorized access incidents by \textbf{~60\%}.
+    \item Optimized Criteria JPA queries for reporting, cutting CSV export time for \textbf{1M+ rows from ~45s to <8s}.
+    \item Built admin portal with HTMX + Spring Boot, improving operations team task throughput by \textbf{~30\%}.
+    \item Implemented multilingual notifications and device fingerprinting, increasing push engagement by \textbf{25\%}.
+\end{itemize}
+
+\textbf{Software Engineer Intern} \hfill Apr 2022 – Nov 2022\\
+Oxytocin Labs \& Cognam Technologies (Trainee) \hfill \textit{Remote}
+\begin{itemize}
+    \itemsep-0.6em
+    \item Built Node.js/TypeScript APIs and React components for a SaaS ad platform (Clients: Spotify, Amazon).
+    \item Enhanced Jinjava engine and used ANTLR to build a linter with semantic validators for a web DSL.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+\textbf{Giggle — Real-time Squad Discovery Platform} \hfill \href{https://giggle-web-git-main-razorblade42s-projects.vercel.app/}{(Live)}
+\begin{itemize}
+    \itemsep-0.6em
+    \item Engineered a video discovery platform with geo-sharded matchmaking using hybrid MongoDB/Redis.
+    \item Implemented Redlock-based atomic pairing and Redis Hashes, reducing DB overhead by \textbf{~50\%}.
+    \item Integrated Agora RTC and Socket.io for low-latency multi-participant video and signaling.
+\end{itemize}
+
+\textbf{Learnspac — Learning Management System} \hfill \href{https://master.d23e6ad1u7odbc.amplifyapp.com}{(Live)}
+\begin{itemize}
+    \itemsep-0.6em
+    \item Built a full-stack LMS with in-browser code execution and RBAC using MERN stack and modular REST APIs.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{4ex}} l }
+Core & Java, Spring Boot, Microservices, Hibernate \\
+Backend & REST APIs, GraphQL, gRPC, Kafka, Redis \\
+Databases & PostgreSQL, MySQL, MongoDB \\
+Cloud/DevOps & Azure, AWS, Terraform, Docker, Linux \\
+AI / LLM & LangChain, RAG, Agentic AI, OpenAI API, Vector DBs, Prompt Engineering \\
+Other & Python, JavaScript, React, Node.js \\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Achievements}
+
+\begin{itemize}
+    \itemsep-0.6em
+    \item Ranked \textbf{282nd in India} at Google Hashcode — top competitive programming contest by Google.
+    \item CodeChef \textbf{4-star (1800+)} rating; solved \textbf{600+ problems} across LeetCode, Codeforces, and CodeChef.
+    \item \textbf{AIR 8,000} in IIT JEE Advanced 2019 — admitted to IIT Goa.
+\end{itemize}
+
+\end{rSection}
+
+\end{document}

@@ -1,0 +1,190 @@
+\documentclass{resume}
+
+\usepackage[a4paper]{geometry}
+\geometry{
+left=0.4in,
+right=0.4in,
+top=0.4in,
+bottom=0.4in
+}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{HIMANSHU}
+
+\address{+91 7488978136 \\ Bengaluru, India} 
+\address{\href{mailto:himanshu.builds@gmail.com}{himanshu.builds@gmail.com} \\ 
+\href{https://www.linkedin.com/in/himanshu-056b461a4/}{linkedin} \\ 
+\href{http://github.com/razorblade42}{github} \\ 
+\href{https://main--himanshu-pro.netlify.app/}{www.himanshu.studio}}
+
+\begin{document}
+% ----------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf B.Tech CSE }, Indian Institute of Technology Goa.    
+  CGPA: 8.43/10 \hfill {2019 - 2023}\\
+Relevant Coursework: Data Structures, Algorithms, Computer Networks, Computer Architecture, Digital Systems, Linear Algebra,Discrete Mathematics, Deep learning and AI.
+
+{\bf Class 12 }, CBSE: Holy Mission Secondary School, Patna, Bihar.      Aggregate: 93.4%  \hfill {2016 - 2018}
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{4ex}} @{\vspace{0.2em}} l }
+Soft Skills & Integrity, Dependability, Teamwork, Problem Solving, Time Management \\
+Languages/Frameworks & Java, Python, C, C++, JavaScript, Spring Boot, MERN Stack, Hibernate, Fast API \\
+DB/Messaging Systems & MySQL, PostgreSQL, MongoDB, Kafka\\
+Development Tools & Git, Github, Docker, Linux, IntelliJ, Postman \\
+Web Technologies & HTML, CSS, HTMX, JavaScript, React\\
+Core Expertise & Backend Development, Microservices Architecture, RESTful APIs, JSON-RPC \\
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Software Engineer} \hfill June 2025 - Present\\
+One Savings Bank India (OSBI) \hfill \textit{Bengaluru}
+\begin{itemize}
+    \itemsep-0.5em
+    \item Architected and developed Java-based microservices using orchestration patterns to power the backend of the bank's new mobile application.
+
+    \item Led backend integration for the mobile app by incorporating FusionAuth APIs for identity management, enabling seamless authentication for existing web platform users.
+
+    \item Built secure RESTful APIs supporting authentication workflows, biometric registration, and biometric login to ensure strong user verification mechanisms.
+
+    \item Optimized and extended existing GraphQL APIs to support mobile application use cases and improve query performance.
+
+    \item Developed backend services leveraging Java, Terraform for infrastructure as code, Microsoft Azure cloud services, APIM for API management, and integrated with the Mambu core banking platform.
+\end{itemize}
+
+\textbf{Software Engineer} \hfill May 2023 - June 2025\\
+Cognam Technologies \hfill \textit{Remote}
+\begin{itemize}
+    \itemsep-0.5em
+    \item Integrated virtual card functionality in user wallet using ISO8583 and Lithic, enabling transactions and features like card activation, deactivation, PIN change, and limit settings.
+
+    \item Built an admin support portal using HTMX for dynamic UI updates and Spring Boot backend to handle seamless client-server interactions.
+
+    \item Optimized SQL queries via Criteria JPA to extract transaction insights and export large datasets as CSV, improving admin-side data access.
+
+    \item Designed a flexible auth system allowing admin-configured multi-step login flows (OAuth/OIDC, email, SMS) and invitation-based user onboarding with enforced auth sequence.
+
+    \item Enhanced the payment app with multilingual notifications and device tracking to boost platform security and user engagement.
+\end{itemize}
+
+\textbf{Software Development Trainee} \hfill June 2022 - Nov 2022\\
+Cognam Technologies \hfill \textit{Remote}
+\begin{itemize}
+    \itemsep-0.5em 
+    \item Enhanced the Jinjava templating engine for broader functionality, increasing its applicability.
+    \item Utilized ANTLR to build a linter for a web template engine.
+    \item Worked on type systems, type inference, and scoping algorithms.
+    \item Implemented syntax and semantic validators in JavaScript.
+\end{itemize}
+
+\textbf{SDE Intern} \hfill April 2022 – May 2022\\
+Oxytocin Labs \hfill \textit{Remote}  
+\begin{itemize}
+    \itemsep-0.5em 
+    \item Contributed to a full-stack ad-making SaaS platform used by clients like Spotify and Amazon.
+    \item Built RESTful APIs using Node.js and TypeScript for robust backend functionality and integration.
+    \item Developed reusable UI components in React.js to deliver responsive and interactive interfaces.
+    \item Integrated backend services with AWS for scalable deployment and improved performance.
+    \item Collaborated in agile sprints, feature planning, and end-to-end product delivery lifecycle.
+\end{itemize}
+
+
+
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+
+  \textbf{Giggle – Squad Discovery Platform} \href{https://giggle-web-git-main-razorblade42s-projects.vercel.app/}{(View)}  
+  \begin{itemize}
+  \itemsep-0.5em 
+      \item Engineered a real-time social discovery platform enabling "Squad-to-Squad" video encounters featuring synchronized cinematic reveals and a geo-sharded matchmaking engine.
+      \item Integrated Agora RTC for low-latency multi-participant video streaming and Socket.io for a sub-millisecond global signaling mesh to facilitate ephemeral squad messaging and live
+  state synchronization.
+      \item Optimized system performance and reliability using a hybrid MongoDB/Redis architecture, implementing Redlock-based atomic pairing and migrating high-frequency session data to
+  Redis Hashes to reduce database overhead.
+      \item Developed a responsive, "Industrial Minimalist" UX using Next.js 15 and Framer Motion, featuring collapsible workspaces, immersive discovery modes, and a "Gatekeeper" manual
+  approval security pipeline.
+
+  \end{itemize}
+  
+\textbf{Learnspac – Learning Platform} \href{https://master.d23e6ad1u7odbc.amplifyapp.com}{(View)}  
+\begin{itemize}
+\itemsep-0.5em 
+    \item Built a full-stack learning management system enabling institutes to create and manage courses, assignments, and student enrollments seamlessly.
+    \item Integrated an in-browser code editor with real-time code execution.
+    \item Implemented secure authentication and role-based access control for admins, instructors, and students with customized permissions.
+    \item Used MERN stack, designed modular and scalable REST APIs as well as React components to ensure maintainability and support for future feature extensions.
+
+\end{itemize}
+
+\textbf{Unsupervised Chunking (Hindi)} \href{https://github.com/razorblade42/unsupervised-chunking}{(View)}  
+\begin{itemize}
+\itemsep-0.5em 
+    \item Developed an unsupervised algorithm to chunk Hindi sentences and identify syntactic units.
+    \item Explored n-gram frequency models and K-means clustering for syntactic analysis.
+    \item Focused on improving natural language processing for Hindi sentence structures.
+\end{itemize}
+
+\end{rSection}
+
+
+
+
+
+
+\begin{rSection}{POSITIONS OF RESPONSIBILITY}
+
+\begin{itemize}
+    \itemsep-0.5em 
+    \item Mentored a first-year student as part of the student mentorship program.
+    \item Led the Go-Corona competition team to develop a game based on the “corona” theme.
+    \item Team Lead for the “Learnspac - Learning Platform” project.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{ACHIEVEMENTS}
+
+\begin{itemize}
+    \itemsep-0.5em 
+    \item Achieved a CodeChef rating of 1800+ (4-star) and ranked 282 in Google Hashcode, India.
+    \item Secured All India Rank 8k in IIT JEE Advanced (2019) and All India Rank 14k in JEE Mains (2019).
+    \item Solved 600+ problems on competitive coding platforms such as CodeChef, Codeforces, and LeetCode.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EXTRA-CURRICULAR ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\end{document}
